@@ -9,3 +9,4 @@ jobs:
         with:
           ig-publisher: "latest"
           sushi: "latest"
+          path: "output"
