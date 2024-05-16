@@ -9,4 +9,7 @@ jobs:
         with:
           ig-publisher: "latest"
           sushi: "latest"
-          path: "output"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ig-output
+          path: /home/runner/work/bghd-ig/bghd-ig/output
