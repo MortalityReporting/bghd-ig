@@ -4,27 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: check out main
-        uses: actions/checkout@v4
-        with:
-          path: main
-      - name: check out fhir-ig branch
-        uses: actions/checkout@v4
-        with:
-          ref: fhir-ig
-          path: fhirig
-      - working-directory: ./fhirig
-        run: |
-          ls
-          ls ./main
-          cp -rf ./main/input ./fhirig
+      - uses: actions/checkout@v4
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "latest"
           sushi: "latest"
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -f /home/runner/work/bghd-ig/bghd-ig/output
-          git commit -m "output generated"
-          git push
