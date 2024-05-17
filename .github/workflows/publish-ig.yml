@@ -17,10 +17,10 @@ jobs:
           pwd
           cp -rf ./main/input ./fhirig/
       - uses: qligier/fhir-ig-action@v0.3.0
-        working-directory: ./fhirig
         with:
           ig-publisher: "latest"
           sushi: "latest"
+          path: fhirig
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
