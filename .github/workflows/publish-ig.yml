@@ -15,7 +15,7 @@ jobs:
           path: fhirig
       - run: |
           pwd
-          cp -rf ../main/input .
+          cp -rf ./main/input ./fhirig/
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "latest"
