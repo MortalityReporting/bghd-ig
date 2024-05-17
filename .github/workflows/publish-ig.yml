@@ -8,7 +8,7 @@ jobs:
         with:
           ref: fhir-ig
       - run: |
-          git reset --hard main
+          git reset --hard origin/main
           git push -f
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
