@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "fhir.example",
   "ig-ver" : "0.1.0",
-  "date" : "Fri, 17 May, 2024 00:21:27 +0000",
-  "dateISO8601" : "2024-05-17T00:21:27+00:00",
+  "date" : "Fri, 17 May, 2024 00:32:30 +0000",
+  "dateISO8601" : "2024-05-17T00:32:30+00:00",
   "errs" : 0,
   "warnings" : 4,
   "hints" : 0,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 835821984
+  "maxMemory" : 1576698880
 }
