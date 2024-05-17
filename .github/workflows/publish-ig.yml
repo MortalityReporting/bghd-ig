@@ -4,14 +4,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: check out main
+        uses: actions/checkout@v4
+        with:
+          path: main
+      - name: check out fhir-ig branch
+        uses: actions/checkout@v4
         with:
           ref: fhir-ig
       - run: |
-          git merge -s ours master -m "test"
-          git checkout master
-          git merge fhir-ig
-          git push -f
+          cp -r ../input .
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "latest"
