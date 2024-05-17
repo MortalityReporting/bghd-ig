@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: fhir-ig
-      - run: git rebase origin/fhir-ig
+      - run: git reset --hard origin/fhir-ig
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "latest"
