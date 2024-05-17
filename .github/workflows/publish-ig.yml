@@ -12,8 +12,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: fhir-ig
+          path: fhirig
       - run: |
-          cp -r ../main/input .
+          pwd
+          cp -rf ../main/input .
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "latest"
