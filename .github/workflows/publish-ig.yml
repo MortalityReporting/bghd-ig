@@ -8,6 +8,7 @@ jobs:
         with:
           ref: fhir-ig
       - run: |
+          git checkout main
           git merge -s ours main -m "test"
           git push -f
       - uses: qligier/fhir-ig-action@v0.3.0
