@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: fhir-ig
+      - run: git rebase origin/main
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "latest"
